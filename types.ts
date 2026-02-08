@@ -7,6 +7,13 @@ export interface Question {
   explanation: string;
 }
 
+export interface ClinicalCase {
+  patient: string;
+  findings: string;
+  question: string;
+  resolution: string;
+}
+
 export interface Module {
   id: number;
   title: string;
@@ -15,6 +22,7 @@ export interface Module {
   textColor: string;
   content: string;
   summary: string;
+  clinicalCase: ClinicalCase;
   quiz: Question[];
 }
 
